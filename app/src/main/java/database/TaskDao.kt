@@ -1,4 +1,6 @@
 package database
+
+
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -7,12 +9,12 @@ import com.bignerdranch.android.todolist.Task
 
 @Dao
 interface TaskDao {
-    @Query("SELECT * FROM task")
-	suspend fun getTask(): MutableList<Task>
+@Query("SELECT * FROM task ORDER BY priority ASC")
+    suspend fun getTask(): MutableList<Task>
 
     @Insert
-	suspend fun addTask(task: Task)
+    suspend fun addTask(task: Task)
 
     @Delete
-	suspend fun delTask(task: Task)
+    suspend fun delTask(task: Task)
 }

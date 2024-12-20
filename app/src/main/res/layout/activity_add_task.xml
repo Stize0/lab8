@@ -5,15 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddActivity">
+	tools:context=".AddActivity"
+    android:fitsSystemWindows="true">
+
     <RadioGroup
         android:id="@+id/priority_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+
         <RadioButton
             android:id="@+id/low_priority"
             android:layout_width="410dp"
@@ -23,6 +28,7 @@
             android:text="Low"
             app:layout_constraintEnd_toStartOf="@+id/medium_priority"
             app:layout_constraintTop_toBottomOf="@+id/contet_task" />
+
         <RadioButton
             android:id="@+id/medium_priority"
             android:layout_width="410dp"
@@ -32,6 +38,7 @@
             android:text="Medium"
             app:layout_constraintEnd_toStartOf="@+id/high_priority"
             app:layout_constraintTop_toBottomOf="@+id/contet_task" />
+
         <RadioButton
             android:id="@+id/high_priority"
             android:layout_width="410dp"
@@ -40,7 +47,9 @@
             android:text="High"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contet_task" />
+
     </RadioGroup>
+
     <Button
         android:id="@+id/add_button"
         android:layout_width="150dp"
@@ -51,6 +60,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contet_task" />
+
     <EditText
         android:id="@+id/contet_task"
         android:layout_width="408dp"
@@ -61,4 +71,3 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priority_group" />
-</androidx.constraintlayout.widget.ConstraintLayout>
